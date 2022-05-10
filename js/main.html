@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+  
+  <!-- 모달창 -->
+  <div class="black-bg">
+    <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <!-- Form -->
+      <form action="success.html">
+        <div class="my-3">
+          <input type="text" class="form-control" Id="txt">
+        </div>
+              <div class="my-3">
+                <input type="password" class="form-control" Id="pw">
+              </div>
+              <button type="submit" class="btn btn-primary" id="commit">전송</button>
+              <button type="button" class="btn btn-danger" id="close">닫기</button>
+            </form> 
+          </div>
+        </div> 
+        
+        
+        <!-- navbar 리스트 -->
+        <ul class="list-group">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+        
+        <!-- 로그인버튼 -->
+        <div class="main-bg">
+          <h4>shirts on Sale</h4>
+          <button id="login" class="btn btn-danger">로그인</button>
+        </div>
+        
+        <!-- navbar -->
+        <!-- 다크모드 -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <span class="navbar-brand">JSSHOP</span>
+              <span class="badge bg-dark">Dark 🔄</span>
+              <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav> 
+        <!-- 다크모드 -->
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+          
+        </script>
+
+          <div class="alert alert-danger" id="danger">
+            <span id="num">5</span>초이내 구매시 사은품 증정!
+          </div>
+
+        <script>
+
+// 타이머과제
+       setTimeout(function() {
+         $('.alert').hide();
+       },5000)
+            
+       var count = 5
+          setInterval(function(){
+              count -= 1;
+              if (count >=0) {
+                document.querySelector('#num').innerHTML = count;
+              }
+            }, 1000);
+      
+        
+          
+
+// 변수 예금계산 과제
+          var age = 12;
+          const place = '부산';
+          var 예금액 = 10000;
+          var 미래예금액 = 0;
+
+          //여기에 코드짜보십시오  
+          
+          if (예금액 >= 50000){
+            미래예금액 = 예금액 * 1.2 *1.2;
+          } else {
+            미래예금액 = 예금액 * 1.15 *1.15;
+          }
+          
+          console.log(미래예금액)
+
+
+        
+
+         
+          // badge 클릭횟수가 홀수면 내부글자 litght로 변경, 짝수면 dark로 변경
+          $('.badge').on('click',function(){
+            count += 1;
+            if(count % 2 == 1) {
+              $('.badge').html('light 🔄')
+            } else {
+              $('.badge').html('dark 🔄')
+            }
+            
+           
+            
+          });
+          
+          
+          
+          </script>
+
+    
+
+<div class="잡소리" >
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+  Quae voluptas voluptatum minus praesentium fugit debitis at, 
+  laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, 
+  eligendi quae consectetur praesentium exercitationem.
+</div>
+
+
+    <!-- 넷바 스크롤시 글씨체 -->
+    <div style="height: 1000px"></div>
+    <script>
+      document.querySelector('.잡소리').addEventListener('scroll',function(){
+
+        var scheight = document.querySelector('.잡소리').scrollHeight
+        var sctop = document.querySelector('.잡소리').scrollTop;
+        var 실제높이 = document.querySelector('.잡소리').clientHeight;
+          console.log(scheight,sctop);
+      })
+
+      
+
+    
+    </script>
+
+<!-- 조건문,등 실습들 -->
+
+<!-- 슬라이드 -->
+<div style="overflow: hidden">
+  <div class="slide-container">
+    <div class="slide-box">
+      <img src="imgs/car1.png">
+    </div>
+    <div class="slide-box">
+      <img src="imgs/car2.png">
+    </div>
+    <div class="slide-box">
+      <img src="imgs/car3.png">
+    </div>
+  </div>
+</div> 
+
+
+
+
+
+<!-- 버튼 클릭시 이미지 넘어가는 이벤트 -->
+<div class="button_tools">
+<button class="slide-1">1</button>
+<button class="slide-2">2</button>
+<button class="slide-3">3</button>
+<button class="next">다음</button>
+<button class="back">이전</button>
+</div>
+<script>
+
+// 하드코딩
+
+//   $('.slide-1').on('click',function(){
+//     $('.slide-container').css('transform','translateX(0vw)');
+//   });
+
+//   $('.slide-2').on('click', function() {
+//   $('.slide-container').css('transform', 'translateX(-100vw)');
+// });
+// $('.slide-3').on('click', function() {
+//   $('.slide-container').css('transform', 'translateX(-200vw)');
+// });
+
+
+// 축약코딩
+var nextimg = 1;
+var backimg = 2;
+$('.next').on('click',function(){
+  $('.slide-container').css('transform','translateX(-' + nextimg + '00vw)');
+  if(nextimg === 2){
+    nextimg -= 3;
+  }
+  nextimg += 1;
+  
+});
+
+$('.back').on('click',function(){
+  $('.slide-container').css('transform','translateX(-' + nextimg + '00vw)');
+  if(nextimg === 0){
+    nextimg += 3;
+  }
+  nextimg -= 1;
+});
+
+
+
+
+// $('.next').on('click',function(){
+//   if(nowimg == 0){
+//     $('.slide-container').css('transform','translateX(-100vw)');
+//     nowimg +=1;
+//   } else if (nowimg == 1) {
+//     $('.slide-container').css('transform', 'translateX(-200vw)');
+//   } else if(nowimg == 2) {
+//     $('.slide-container').css('transform', 'translateX(0vw)');
+//   }
+// })
+
+</script>
+
+<script>
+  // <!-- 로그인시 빈칸 입력하면 경고창 -->
+  $('form').on('submit',function(e){
+    var 아이디 = document.getElementById('txt').value;
+    var 비번 = document.getElementById('pw').value;
+
+    if(아이디 == ''){
+      alert('빈칸없이 입력하시오');
+      
+    } if(/\S+@\S+.\S+/.test(아이디) == false ){
+        alert('이메일형식으로 입력하셈요');
+    }
+    if(비번 == ''){
+      alert('비번을 입력하시오');
+      
+    } if(/[A-Z]/.test(비번) == true){
+        alert('대문자입력햇슴');
+    }
+
+    if(비번.length < 6) {
+      alert('더입력');
+          }
+          e.preventDefault();
+        });
+// % = 배수 , 몇배수일 때 출력해주는 조건문
+        function 삼육구게임(x){
+         if (x % 9 == 0) {console.log('박수,박수');
+        } else if (x % 3 == 0) {
+          console.log('박수2');
+        } else {
+          console.log('통과');
+        }
+      }
+      삼육구게임(18);
+    
+      console.log('야임마');
+      // 합불 출력조건문
+      function 합격했냐(y,z) {
+        if(y <= 40 || z <= 40) {
+          console.log('불합격');
+        } else if(y+z >= 120){
+            console.log('합격');
+        } else {
+          console.log('불합격');
+        }
+      }
+      합격했냐(40,8700);
+
+// 3,6,9 일때 박수
+      function 제대로삼육구(t){
+        if(t == 3 || t == 6 || t == 9){
+          console.log('박수');
+        } else {
+          console.log(t);
+        }
+      }
+      제대로삼육구();
+
+      // 0-100 이 아닐때
+      function 영에서백만입력(w){
+          if(w >0 & w <= 100){
+            console.log('굳');
+          } else {
+            console.log('0~100만 입력하셈');
+
+          }
+      }
+
+      영에서백만입력();
+    </script>
+
+
+<!-- 모달창열기닫기 -->
+      <script>
+        // 모달창 열기 닫기
+        // 제이쿼리코드
+        $('#login').on('click',function(){
+          $('.black-bg').addClass('show-modal')
+          $('#close').on('click',function(){
+            $('.black-bg').removeClass('show-modal')
+          })
+        })
+        
+        // 자바스크립트 코드
+        //  document.querySelector('#login').addEventListener('click',function(){
+          //    document.querySelectorAll('.black-bg')[0].classList.add('show-modal');
+          //   });
+          //  document.querySelector('#close').addEventListener('click',function(){
+        //    document.querySelectorAll('.black-bg')[0].classList.remove('show-modal');
+        //   });
+          
+        
+        
+        
+        
+        // navbar 토글창 열기닫기
+        //  제이쿼리 코드
+        $('.navbar-toggler').on('click',function(){
+          $('.list-group').toggleClass('show');
+        })
+        
+        //  only 자바스크립트  코드
+        // document.querySelector('.navbar-toggler').addEventListener('click', 
+        // function(){
+          //     document.querySelectorAll('.list-group')[0].classList.toggle('show');
+          // });
+          
+          </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+      
+    </script>
+</body>
+</html>

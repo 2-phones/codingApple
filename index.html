@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div class="alret-box" id="alret">
+        <p id="tittle">Id를 입력하시오</p>
+        <button Id="close">닫기</button>
+    </div>
+    <button onclick="알림창1열기('아이디를 입력하세요')">버튼</button>
+    <button onclick="알림창1열기('비밀번호를 입력하세요');">버튼2</button>
+
+
+    
+    <script>
+
+        document.getElementById('close').addEventListener('click', function() {
+            document.getElementById('alret').style.display='none';
+        });
+
+
+    
+
+        function 알림창1열기(변수) {
+            document.getElementById('tittle').innerHTML = 변수;
+            document.getElementById('alret').style.display = 'block'; 
+
+        }
+
+        
+        
+
+        function 알림창열기(구멍) {
+            document.getElementById('alret').style.display = 구멍; 
+        }
+        
+        
+
+    </script>
+</body>
+</html>

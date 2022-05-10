@@ -1,0 +1,7 @@
+.alret-box {
+    background: rgb(166, 166, 219);
+    color: honeydew;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
